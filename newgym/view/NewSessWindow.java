@@ -14,6 +14,7 @@ public class NewSessWindow {
 	private JTextField txtNumSess;
 	private JTextField txtCantRep;
 	private JTextField txtSessTime;
+	private JButton createSessBtn;
 	
 	public NewSessWindow() {
 		// TODO Auto-generated constructor stub
@@ -77,7 +78,7 @@ public class NewSessWindow {
 		int height = frame.getSize().height;
 
 		// button to insert a new record in the ABS table
-		JButton createSessBtn = new JButton("Crear");
+		createSessBtn = new JButton("Crear");
 		createSessBtn.setBounds(width/2-100/2, 135, 100, 25);
 		createSessBtn.addActionListener(new ProcessCreaSessBtn(this));
 
@@ -85,6 +86,15 @@ public class NewSessWindow {
 
 		frame.setLocation(1920/2-width/2, 1080/2-height/2);
 		frame.setVisible(true);
+	}
+
+	// getters and setters
+	public JButton getCreateSessBtn() {
+		return createSessBtn;
+	}
+
+	public void setCreateSessBtn(JButton createSessBtn) {
+		this.createSessBtn = createSessBtn;
 	}
 
 	public JTextField getTxtNumSess() {

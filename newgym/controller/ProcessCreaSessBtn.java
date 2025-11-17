@@ -17,7 +17,7 @@ public class ProcessCreaSessBtn implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		new ProcessNewSessData(getWin().getTxtNumSess().getText(), getWin().getTxtCantRep().getText(), getWin().getTxtSessTime().getText());
+		new ProcessNewSessData(getWin(), getWin().getTxtNumSess().getText(), getWin().getTxtCantRep().getText(), getWin().getTxtSessTime().getText());
 	}
 
 	public NewSessWindow getWin() {
