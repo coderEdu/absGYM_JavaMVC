@@ -21,6 +21,7 @@ public class NewActWindow {
 	private JComboBox<String> comboHour2;
 	private JComboBox<String> comboMin1;
 	private JComboBox<String> comboMin2;
+	private JButton btnNewActiv;
 	private int day;
 	
 	public NewActWindow() {
@@ -112,7 +113,7 @@ public class NewActWindow {
 		comboMin2 = creaMinCombo(126, 100 + more, 60, 20, mins);
 		
 		// ------------------------------------------------
-		JButton btnNewActiv = new JButton("Agregar");
+		btnNewActiv = new JButton("Agregar");
 		btnNewActiv.setBounds(188, 170, 100, 25);
 		
 		// Button actionListener Event
@@ -136,7 +137,7 @@ public class NewActWindow {
 		
 		f.setVisible(true);
 	}
-	
+
 	public int getSelectedMonth(JComboBox<String> combo) {
 		int v=0;		
 		String item = combo.getSelectedItem().toString();
@@ -210,6 +211,15 @@ public class NewActWindow {
 		fillMinuteCombo(comboMin, day, mins);
 		
 		return comboMin;
+	}
+	
+	// getters and setters
+	public JButton getBtnNewActiv() {
+		return btnNewActiv;
+	}
+
+	public void setBtnNewActiv(JButton btnNewActiv) {
+		this.btnNewActiv = btnNewActiv;
 	}
 
 	public JComboBox<String> getComboYear() {

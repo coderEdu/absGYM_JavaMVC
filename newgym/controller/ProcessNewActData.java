@@ -48,8 +48,11 @@ public class ProcessNewActData implements ActionListener {
 		
         ActivityModel activity = new ActivityModel();			
         int rowsAffected = activity.insertNewActivity(beginTS, finishTS);
-        StaticResources.setRefreshCombo(true);
-        JOptionPane.showMessageDialog(null, rowsAffected + " activity(s) inserted.");
+        if (rowsAffected > 0) {        	
+        	StaticResources.setRefreshCombo(true);
+        	JOptionPane.showMessageDialog(null, rowsAffected + " activity(s) inserted.");
+        	getWindow().getBtnNewActiv().setEnabled(false);
+        }
 	}
 
 }
